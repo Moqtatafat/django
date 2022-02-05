@@ -16,6 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from polls import views
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("",            views.index,        name = "home"),
+    path("epsoides",    views.epsoides,     name = "epsoides"),
+    path("posts",       views.posts,        name = "posts"),
+    path("images",      views.imgs,         name = "images"),
+    path("about_us",    views.about,        name = "about us"),
+    path("admin/",      admin.site.urls,    name = ""),
 ]

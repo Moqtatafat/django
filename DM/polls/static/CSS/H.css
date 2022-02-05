@@ -1,0 +1,12 @@
+.hdr {
+    display: flex;
+}
+.hdr>div:first-child, .hdr>div:last-child {
+    display: flex;
+}
+.hdr>div:first-child>div, .hdr>div:last-child>div {
+    
+}
+.hdr>div:nth-child(2)>img {
+    width: 65px;
+}
