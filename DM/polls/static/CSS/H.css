@@ -1,12 +1,19 @@
 .hdr {
     display: flex;
+    padding: 0 calc(50% - 310px);
 }
 .hdr>div:first-child, .hdr>div:last-child {
     display: flex;
 }
-.hdr>div:first-child>div, .hdr>div:last-child>div {
-    
+.hdr>div:first-child>a, .hdr>div:last-child>a {
+    color: rgba(255,255,255,1);
+    margin: 35px;
+    font-family: "tajawalb";
 }
-.hdr>div:nth-child(2)>img {
+.hdr>div:first-child>a:hover, .hdr>div:last-child>a:hover {
+    color: rgba(247,181,0,1);
+}
+.hdr>a:nth-child(2)>img {
+    padding: 5px 0;
     width: 65px;
 }
