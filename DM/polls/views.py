@@ -7,13 +7,17 @@ from django.shortcuts import render
 from django.http import Http404, HttpResponse
 from django.template import loader
 
-from . import models
+from . import models, data
 
 # Create your views here.
 
 def index(request) :
     template = loader.get_template('polls/index.html')
-    context = None
+    identifier = 0
+    context = {
+        "identifier"    : identifier,
+        "slides"        : data.slides,
+    }
     return HttpResponse(template.render(context, request))
 
 def epsoides(request) :
@@ -27,3 +31,5 @@ def imgs(request) :
 
 def about(request) :
     return HttpResponse("About")
+
+# ngrok http -auth="jo:760320" -bind-tls=true https://localhost:8000

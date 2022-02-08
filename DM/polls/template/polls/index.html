@@ -4,7 +4,7 @@
     <head>
 <!--    v0.0.1                      -->
 <!--    info                        -->
-        <link href="{% static 'Media/Photo/' %}" rel="icon" type="image/png"/>
+        <link href="{% static 'Media/IMG/' %}" rel="icon" type="image/png"/>
         <title>
             مقتطفات من الكتاب والسنة
         </title>
@@ -26,14 +26,23 @@
     <body id="b">
         <header id="h">
             <div id="h_0" class="sld">
-
+                {% for i in slides %}
+                <div style="background : url({% static i.bkgd %}); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+                    <div>
+                        <div>
+                            <span>{{ i.text }}</span>
+                            <a href="{{ i.link }}">من هنا</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
             <div id="h_1" class="hdr">
                 <div id="h_1_0">
-                    <a id="h_1_0_0" href="./epsoides">
+                    <a id="h_1_0_0" class="hdr-lst" href="./epsoides">
                         حلقات الموسم
                     </a>
-                    <a id="h_1_0_1" href="./posts">
+                    <a id="h_1_0_1" class="hdr-lst" href="./posts">
                         المقالات
                     </a>
                 </div>
@@ -41,16 +50,16 @@
                     <img id="h_1_1_0" src="{% static 'Media/IMG/LOGO.png' %}"/>
                 </a>
                 <div id="h_1_2">
-                    <a id="h_1_2_0" href="./imgs">
+                    <a id="h_1_2_0" class="hdr-lst" href="./imgs">
                         الصور
                     </a>
-                    <a id="h_1_2_1" href="./about">
+                    <a id="h_1_2_1" class="hdr-lst" href="./about">
                         من نحن
                     </a>
                 </div>
             </div>
         </header>
-        <section id="s0">
+        <section id="s0" style="height:2000px">
             
         </section>
         <section id="s1">
@@ -61,5 +70,5 @@
         </footer>
     </body>
 <!--    JS                          -->
-    <script src="{% static 'JS/' %}"></script>
+    <script src="{% static 'JS/H.js' %}"></script>
 </html>

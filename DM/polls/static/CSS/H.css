@@ -1,17 +1,48 @@
+.sld {
+    height: 700px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.sld>div>div:first-child {
+    height: 100px;
+    padding: 300px 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.sld>div>div>div:last-child {
+    color: rgba(255,255,255,1);
+    margin: auto;
+    padding: 10px;
+    width: 500px;
+    background-color: rgba(104,114,121,0.5);
+}
+.sld>div>div>div:last-child>a {
+    color: rgba(247,181,0,1);
+}
+.sld>div>div>div:last-child>a:hover {
+    text-decoration: underline;
+}
 .hdr {
     display: flex;
-    padding: 0 calc(50% - 310px);
+    padding: 0 calc(50% - 305px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 .hdr>div:first-child, .hdr>div:last-child {
     display: flex;
 }
-.hdr>div:first-child>a, .hdr>div:last-child>a {
+.hdr-lst {
     color: rgba(255,255,255,1);
     margin: 35px;
     font-family: "tajawalb";
 }
-.hdr>div:first-child>a:hover, .hdr>div:last-child>a:hover {
+.hdr-lst:hover {
     color: rgba(247,181,0,1);
+}
+.blk {
+    color: rgba(0, 0, 0, 1);
 }
 .hdr>a:nth-child(2)>img {
     padding: 5px 0;
