@@ -1,13 +1,13 @@
-from curses.ascii import US
-from multiprocessing import context
-from re import M, template
-import re
-from tkinter.messagebox import NO
+# from curses.ascii import US
+# from multiprocessing import context
+# from re import M, template
+# import re
+# from tkinter.messagebox import NO
 from django.shortcuts import render
-from django.http import Http404, HttpResponse
+from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.template import loader
 
-from . import models, data
+from . import models, data, forms
 
 # Create your views here.
 
@@ -17,11 +17,21 @@ def index(request) :
     context = {
         "identifier"    : identifier,
         "slides"        : data.slides,
+        "opinion"       : data.opinion
+        # "forms"         : forms.NameForm(),
     }
     return HttpResponse(template.render(context, request))
 
 def epsoides(request) :
-    return HttpResponse("epsoides")
+    # if request.method == "POST" :
+    #     form = forms.NameForm(request.POST)
+    #     if form.
+    # return HttpResponseRedirect("/thanks/")
+    # return HttpResponse("epsoides")
+    try :
+        return HttpResponse(request.POST["name"])
+    except :
+        return HttpResponse("nothing")
 
 def posts(request) :
     return HttpResponse("Posts")

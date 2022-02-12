@@ -4,7 +4,7 @@
     <head>
 <!--    v0.0.1                      -->
 <!--    info                        -->
-        <link href="{% static 'Media/IMG/' %}" rel="icon" type="image/png"/>
+        <link href="{% static 'Media/IMG/LOGO.png' %}" rel="icon" type="image/png"/>
         <title>
             مقتطفات من الكتاب والسنة
         </title>
@@ -37,36 +37,55 @@
                 </div>
                 {% endfor %}
             </div>
-            <div id="h_1" class="hdr">
-                <div id="h_1_0">
-                    <a id="h_1_0_0" class="hdr-lst" href="./epsoides">
+            <div id="h_2" class="hdr">
+                <div id="h_2_0">
+                    <a id="h_2_0_0" class="hdr-lst" href="./epsoides">
                         حلقات الموسم
                     </a>
-                    <a id="h_1_0_1" class="hdr-lst" href="./posts">
+                    <a id="h_2_0_1" class="hdr-lst" href="./posts">
                         المقالات
                     </a>
                 </div>
-                <a id="h_1_1" href="./">
-                    <img id="h_1_1_0" src="{% static 'Media/IMG/LOGO.png' %}"/>
+                <a id="h_2_1" href="./">
+                    <img id="h_2_1_0" src="{% static 'Media/IMG/LOGO.png' %}"/>
                 </a>
                 <div id="h_1_2">
-                    <a id="h_1_2_0" class="hdr-lst" href="./imgs">
+                    <a id="h_2_2_0" class="hdr-lst" href="./imgs">
                         الصور
                     </a>
-                    <a id="h_1_2_1" class="hdr-lst" href="./about">
+                    <a id="h_2_2_1" class="hdr-lst" href="./about">
                         من نحن
                     </a>
                 </div>
             </div>
+            <div id="h_3" class="scl-btn">
+                {% for i in slides %}
+                <div></div>
+                {% endfor %}
+            </div>
+            <div id="h_3" class="ctc">
+            
+            </div>
         </header>
         <section id="s0" style="height:2000px">
-            
+            <div id="s0_0">
+                {% for i in opinion %}
+                    <div>i.text</div>
+                {% endfor %}
         </section>
         <section id="s1">
-
+            <form action="./epsoides" method="POST">
+                {% csrf_token %}
+                <input name="name"/>
+                <input type="submit"/>
         </section>
         <footer id="f">
-            
+            <div id="f_0">
+
+            </div>
+            <div id="f_1">
+
+            </div>
         </footer>
     </body>
 <!--    JS                          -->
