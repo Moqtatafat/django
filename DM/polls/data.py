@@ -27,15 +27,23 @@ slides = [
     ]
 opinion = [
     {
-        "text" : "من أحسن المنصات التي رأيتها 1"
+        "imgP" : "Media/IMG/pexels-ali-arapoglu-2112049-scaled.jpg",
+        "text" : "ما شاء الله شغل على اعلى مستوى ربنا يوفقكم ومن أعلى لأعلى بإذن الله❤️",
+        "link" : "https://www.facebook.com/",
     },
     {
-        "text" : "من أحسن المنصات التي رأيتها 2"
+        "imgP" : "Media/IMG/pexels-ali-arapoglu-2112049-scaled.jpg",
+        "text" : "من أحسن المنصات التي رأيتها 2",
+        "link" : "https://www.facebook.com/",
     },
     {
-        "text" : "من أحسن المنصات التي رأيتها 3"
+        "imgP" : "Media/IMG/pexels-ali-arapoglu-2112049-scaled.jpg",
+        "text" : "من أحسن المنصات التي رأيتها 3",
+        "link" : "https://www.facebook.com/",
     },
     {
-        "text" : "من أحسن المنصات التي رأيتها 3"
+        "imgP" : "Media/IMG/pexels-ali-arapoglu-2112049-scaled.jpg",
+        "text" : "من أحسن المنصات التي رأيتها 3",
+        "link" : "https://www.facebook.com/",
     },
 ]

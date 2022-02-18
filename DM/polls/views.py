@@ -12,12 +12,10 @@ from . import models, data, forms
 # Create your views here.
 
 def index(request) :
-    template = loader.get_template('polls/index.html')
-    identifier = 0
+    template = loader.get_template("polls/index.html")
     context = {
-        "identifier"    : identifier,
         "slides"        : data.slides,
-        "opinion"       : data.opinion
+        "opinion"       : data.opinion,
         # "forms"         : forms.NameForm(),
     }
     return HttpResponse(template.render(context, request))
@@ -28,10 +26,11 @@ def epsoides(request) :
     #     if form.
     # return HttpResponseRedirect("/thanks/")
     # return HttpResponse("epsoides")
-    try :
-        return HttpResponse(request.POST["name"])
-    except :
-        return HttpResponse("nothing")
+    # try :
+    #     return HttpResponse(request.POST["name"])
+    # except :
+    #     return HttpResponse("nothing")
+    return HttpResponse("Epsoides")
 
 def posts(request) :
     return HttpResponse("Posts")
@@ -40,6 +39,8 @@ def imgs(request) :
     return HttpResponse("Imgs")
 
 def about(request) :
-    return HttpResponse("About")
+    template = loader.get_template("polls/about.html")
+    context = None
+    return HttpResponse(template.render(context, request))
 
 # ngrok http -auth="jo:760320" -bind-tls=true https://localhost:8000

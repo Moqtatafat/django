@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 {% load static %}
-{% csrf_token %}
 <html lang="ar" dir="rtl">
     <head>
 <!--    v0.0.1                      -->
@@ -29,17 +28,10 @@
     </head>
     <body id="b">
         <header id="h">
-            <div id="h_0" class="sld">
-                {% for i in slides %}
-                <div style="background : url({% static i.bkgd %}); background-size: cover; background-position: center center; background-repeat: no-repeat;">
-                    <div>
-                        <div>
-                            <span>{{ i.text }}</span>
-                            <a href="{{ i.link }}">من هنا</a>
-                        </div>
-                    </div>
+            <div id="h_0" class="pic-hdr" style="background: url({% static '/Media/IMG/bg-07-free-img.jpg' %}); background-repeat: no-repeat; background-size: cover;">
+                <div id="h_0_0">
+                    اكتشف من نحن
                 </div>
-                {% endfor %}
             </div>
             <div id="h_1" class="hdr">
                 <div id="h_1_0">
@@ -62,33 +54,34 @@
                     </a>
                 </div>
             </div>
-            <div id="h_2" class="scl-btn">
-                {% for i in slides %}
-                <div></div>
-                {% endfor %}
-            </div>
-            <div id="h_2" class="ctc">
+            <div id="h_3" class="ctc">
             
             </div>
         </header>
         <section id="s0">
             <div id="s0_0" class="opn-par">
                 <div id="s0_0_0">
-                    آراء بعض الناس
+                    الفريق
                 </div>
-                <div id="s0_0_1" class="opn">
-                    {% for i in opinion %}
-                    <div>
-                        <div>
-                            <img src="{% static i.imgP %}" height="50" width="50"/>
-                        </div>
-                        <div>
-                            <div>
-                                {{ i.text }}
+                <div id="s0_0_1" class="opn num">
+                    <div id="s0_0_1_0">
+                        <div id="s0_0_1_0_0">
+                            <div id="s0_0_1_0_0_0">
+                                ١
                             </div>
                         </div>
+                        <div id="s0_0_1_0_1">
+                            
+                        </div>
                     </div>
-                    {% endfor %}
+                </div>
+            </div>
+            <div id="s0_1" class="opn-par">
+                <div id="s0_1_0">
+                    آراء بعض الناس
+                </div>
+                <div id="s0_1_1" class="opn">
+                    
                 </div>
             </div>
         </section>

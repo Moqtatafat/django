@@ -7,7 +7,7 @@
     height: 100px;
     padding: 300px 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0,0,0,0.5);
 }
 .sld>div>div>div:last-child {
     color: rgba(255,255,255,1);
@@ -21,6 +21,17 @@
 }
 .sld>div>div>div:last-child>a:hover {
     text-decoration: underline;
+}
+.pic-hdr {
+    height: 700px;
+}
+.pic-hdr>div {
+    color: rgba(247,181,0,1);
+    padding: 329px 0;
+    background-color: rgba(104,114,121,0.5);
+    font-family: "tajawaleb";
+    font-size: 35px;
+    text-align: center;
 }
 .hdr {
     display: flex;
@@ -36,7 +47,7 @@
 .hdr-lst {
     color: rgba(255,255,255,1);
     margin: 35px;
-    font-family: "tajawalb";
+    font-family: "tajawaleb";
 }
 .hdr-lst:hover {
     color: rgba(247,181,0,1);

@@ -23,6 +23,6 @@ urlpatterns = [
     path("epsoides",    views.epsoides,     name = "epsoides"),
     path("posts",       views.posts,        name = "posts"),
     path("images",      views.imgs,         name = "images"),
-    path("about_us",    views.about,        name = "about us"),
+    path("about",       views.about,        name = "about us"),
     path("admin/",      admin.site.urls,    name = ""),
 ]
