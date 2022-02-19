@@ -17,19 +17,7 @@ window.onscroll = () => {
     };
 };
 
-function setID(_elmnt) {
-    _parent = _elmnt.getAttribute("id");
-    for (let i = 0; i < _elmnt.children.length; i++)
-        _elmnt.children[i].setAttribute("id", _parent + "_" + i);
-};
 if (_sld != undefined) {
-    setID(_sld);
-    for (let i = 0; i < _sld.children.length; i++) {
-        setID(_sld.children[i]);
-        setID(_sld.children[i].children[0]);
-        setID(_sld.children[i].children[0].children[0]);
-    };
-    setID(_scb);
     setInterval(() => {
         _scb.style.marginTop = (350 - (_scb.clientHeight / 2)) + "px";
     }, 0);

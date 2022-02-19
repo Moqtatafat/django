@@ -27,9 +27,9 @@
     rgba(17,21,24,1)
 -->
     </head>
-    <body id="b">
-        <header id="h">
-            <div id="h_0" class="sld">
+    <body>
+        <header>
+            <div class="sld">
                 {% for i in slides %}
                 <div style="background : url({% static i.bkgd %}); background-size: cover; background-position: center center; background-repeat: no-repeat;">
                     <div>
@@ -41,42 +41,42 @@
                 </div>
                 {% endfor %}
             </div>
-            <div id="h_1" class="hdr">
-                <div id="h_1_0">
-                    <a id="h_1_0_0" class="hdr-lst" href="./epsoides">
+            <div class="hdr">
+                <div>
+                    <a class="hdr-lst" href="./epsoides">
                         حلقات الموسم
                     </a>
-                    <a id="h_1_0_1" class="hdr-lst" href="./posts">
+                    <a class="hdr-lst" href="./posts">
                         المقالات
                     </a>
                 </div>
-                <a id="h_1_1" href="./">
-                    <img id="h_1_1_0" src="{% static 'Media/IMG/LOGO.png' %}"/>
+                <a href="./">
+                    <img src="{% static 'Media/IMG/LOGO.png' %}"/>
                 </a>
-                <div id="h_1_2">
-                    <a id="h_1_2_0" class="hdr-lst" href="./imgs">
+                <div>
+                    <a class="hdr-lst" href="./images">
                         الصور
                     </a>
-                    <a id="h_1_2_1" class="hdr-lst" href="./about">
+                    <a class="hdr-lst" href="./about">
                         من نحن
                     </a>
                 </div>
             </div>
-            <div id="h_2" class="scl-btn">
+            <div class="scl-btn">
                 {% for i in slides %}
                 <div></div>
                 {% endfor %}
             </div>
-            <div id="h_2" class="ctc">
+            <div class="ctc">
             
             </div>
         </header>
-        <section id="s0">
-            <div id="s0_0" class="opn-par">
-                <div id="s0_0_0">
+        <section>
+            <div class="opn-par">
+                <div>
                     آراء بعض الناس
                 </div>
-                <div id="s0_0_1" class="opn">
+                <div class="opn">
                     {% for i in opinion %}
                     <div>
                         <div>
@@ -92,59 +92,53 @@
                 </div>
             </div>
         </section>
-        <section id="s1">
+        <section>
             
         </section>
-        <footer id="f">
-            <div id="f_0">
-                <div id="f_0_0">
-                    <div id="f_0_0_0">
+        <footer>
+            <div>
+                <div>
+                    <div>
                         صفحاتنا
                     </div>
-                    <div id="f_0_0_1">
-                        <a id="f_0_0_1_0" href="">
-                            الفيس بوك
+                    <div>
+                        {% for i in footer.pages %}
+                        <a href="{{ i.1 }}" target="_blank">
+                            {{ i.0 }}
                         </a><br/>
-                        <a id="f_0_0_1_1" href="">
-                            تليجرام
-                        </a>
+                        {% endfor %}
                     </div>
                 </div>
-                <div id="f_0_1">
-                    <div id="f_0_1_0">
+                <div>
+                    <div>
                         جروبتنا
                     </div>
-                    <div id="f_0_1_1">
-                        <a id="f_0_1_1_0" href="">
-                            الفيس بوك
-                        </a>
+                    <div>
+                        {% for i in footer.groups %}
+                        <a href="{{ i.1 }}" target="_blank">
+                            {{ i.0 }}
+                        </a><br/>
+                        {% endfor %}
                     </div>
                 </div>
-                <div id="f_0_2">
-                    <div id="f_0_2_0">
+                <div>
+                    <div>
                         آخر اﻷخبار
                     </div>
-                    <div id="f_0_2_1">
-                        <a id="f_0_2_1_0" href="">
-                            الموقع
+                    <div>
+                        {% for i in footer.news %}
+                        <a href="{{ i.1 }}">
+                            {{ i.0 }}
                         </a><br/>
-                        <a id="f_0_2_1_1" href="">
-                            الموقع
-                        </a><br/>
-                        <a id="f_0_2_1_2" href="">
-                            الموقع
-                        </a><br/>
-                        <a id="f_0_2_1_3" href="">
-                            الموقع
-                        </a>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
-            <div id="f_1">
-                حقوق النشر © لعام 2022 محفوظة لموقع
-                <a id="f_1_0" href="./">مقتطفات من الكتاب والسنة</a><br/>
+            <div>
+                حقوق النشر © لعام {{ footer.year }} محفوظة لموقع
+                <a href="./">مقتطفات من الكتاب والسنة</a><br/>
                 تم إنشاؤه بواسطة
-                <a id="f_1_1" href="./about">فريق مقتطفات من الكتاب والسنة</a><br/>
+                <a href="./about">فريق مقتطفات من الكتاب والسنة</a><br/>
             </div>
         </footer>
     </body>

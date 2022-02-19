@@ -27,13 +27,6 @@
     border-radius: 15px;
     flex-direction: row;
 }
-.num>div {
-    height: 97px;
-    overflow: auto;
-}
-.opn>div>div:last-child {
-    padding: 20px 0;
-}
 .opn>div>div:first-child>img {
     border: 2.5px rgba(247,181,0,1) solid;
     margin: 50px;
@@ -45,4 +38,28 @@
     padding: 25px 50px;
     font-family: "tajawaleb";
     font-size: 35px;
+}
+.opn>div>div:last-child {
+    padding: 10px;
+}
+.opn>div>div:last-child>b {
+    font-family: "tajawalb";
+    font-weight: normal;
+}
+.opn>div>div:last-child>a {
+    color: rgba(247,181,0,1);
+}
+.opn>div>div:last-child>a:hover {
+    text-decoration: underline;
+}
+.num>div {
+    height: 97px;
+    overflow: auto;
+}
+.dat>div {
+    display: flex;
+    flex-direction: column;
+}
+.dat>div>div:first-child>div {
+    text-align: center;
 }

@@ -16,6 +16,7 @@ def index(request) :
     context = {
         "slides"        : data.slides,
         "opinion"       : data.opinion,
+        "footer"        : data.footer,
         # "forms"         : forms.NameForm(),
     }
     return HttpResponse(template.render(context, request))
@@ -30,17 +31,31 @@ def epsoides(request) :
     #     return HttpResponse(request.POST["name"])
     # except :
     #     return HttpResponse("nothing")
-    return HttpResponse("Epsoides")
+    template = loader.get_template("polls/about.html")
+    context = {
+        "footer"        : data.footer,
+    }
+    return HttpResponse(template.render(context, request))
 
 def posts(request) :
-    return HttpResponse("Posts")
+    template = loader.get_template("polls/about.html")
+    context = {
+        "footer"        : data.footer,
+    }
+    return HttpResponse(template.render(context, request))
 
 def imgs(request) :
-    return HttpResponse("Imgs")
+    template = loader.get_template("polls/about.html")
+    context = {
+        "footer"        : data.footer,
+    }
+    return HttpResponse(template.render(context, request))
 
 def about(request) :
     template = loader.get_template("polls/about.html")
-    context = None
+    context = {
+        "footer"        : data.footer,
+    }
     return HttpResponse(template.render(context, request))
 
 # ngrok http -auth="jo:760320" -bind-tls=true https://localhost:8000

@@ -1,3 +1,4 @@
+import datetime
 slides = [
         {
             "text" : "الشريحة اﻷولى",
@@ -47,3 +48,16 @@ opinion = [
         "link" : "https://www.facebook.com/",
     },
 ]
+footer = {
+    "pages" : [
+        ["الفيس بوك", "https://www.facebook.com/Excerpts100"],
+        ["التليجرام", "https://t.me/Excerpts10"],
+    ],
+    "groups" : [
+        ["الفيس بوك", "https://www.facebook.com/groups/384209120098037"],
+    ],
+    "news" : [
+        ["الموقع", "./"],
+    ],
+    "year" : str(datetime.datetime.now().year),
+}
