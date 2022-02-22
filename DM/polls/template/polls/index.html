@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 {% load static %}
-{% csrf_token %}
 <html lang="ar" dir="rtl">
     <head>
 <!--    v0.0.1                      -->
@@ -43,8 +42,8 @@
             </div>
             <div class="hdr">
                 <div>
-                    <a class="hdr-lst" href="./epsoides">
-                        حلقات الموسم
+                    <a class="hdr-lst" href="./episodes">
+                        حلقات المواسم
                     </a>
                     <a class="hdr-lst" href="./posts">
                         المقالات
@@ -138,7 +137,7 @@
                 حقوق النشر © لعام {{ footer.year }} محفوظة لموقع
                 <a href="./">مقتطفات من الكتاب والسنة</a><br/>
                 تم إنشاؤه بواسطة
-                <a href="./about">فريق مقتطفات من الكتاب والسنة</a><br/>
+                <a href="./about#team">فريق مقتطفات من الكتاب والسنة</a><br/>
             </div>
         </footer>
     </body>

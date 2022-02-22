@@ -3,9 +3,12 @@
 # from re import M, template
 # import re
 # from tkinter.messagebox import NO
-from django.shortcuts import render
+
+# from django.shortcuts import render
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.template import loader
+
+# from json import dumps
 
 from . import models, data, forms
 
@@ -21,18 +24,19 @@ def index(request) :
     }
     return HttpResponse(template.render(context, request))
 
-def epsoides(request) :
+def episodes(request) :
     # if request.method == "POST" :
     #     form = forms.NameForm(request.POST)
     #     if form.
     # return HttpResponseRedirect("/thanks/")
-    # return HttpResponse("epsoides")
+    # return HttpResponse("episodes")
     # try :
     #     return HttpResponse(request.POST["name"])
     # except :
     #     return HttpResponse("nothing")
-    template = loader.get_template("polls/about.html")
+    template = loader.get_template("polls/episodes.html")
     context = {
+        "videos"        : data.videos,
         "footer"        : data.footer,
     }
     return HttpResponse(template.render(context, request))

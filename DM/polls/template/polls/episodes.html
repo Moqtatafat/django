@@ -28,9 +28,9 @@
     </head>
     <body>
         <header>
-            <div class="pic-hdr" style="background: url({% static '/Media/IMG/bg-07-free-img.jpg' %}); background-repeat: no-repeat; background-position: center center; background-size: cover;">
+            <div class="pic-hdr" style="background: url({% static '/Media/IMG/istockphoto-1212170511-612x612.jpg' %}); background-position: center center; background-repeat: no-repeat; background-size: cover;">
                 <div>
-                    اكتشف من نحن
+                    حلقات المواسم
                 </div>
             </div>
             <div class="hdr">
@@ -59,99 +59,41 @@
             </div>
         </header>
         <section>
-            <div class="opn-par" id="team">
-                <div>
-                    الفريق
-                </div>
-                <div class="opn num">
-                    <div>
-                        <div>
-                            <div>
-                                ١
-                            </div>
-                        </div>
-                        <div>
-                            <b>يوسف حسن (اﻷي تي)</b><br/>
-                            <a href="https://www.facebook.com/JO101100" target="_blank">
-                                الفيس بوك
-                            </a>، 
-                            <a href="https://te.me/JOYosephHassan" target="_blank">
-                                التليجرام
-                            </a>، 
-                            <a href="https://m.me/JO101100" target="_blank">
-                                الماسنجر
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                ٢
-                            </div>
-                        </div>
-                        <div>
-                            <b>أحمد إسماعيل (اﻷي تي)</b><br/>
-                            <a href="https://wa.me/+966541668747" target="_blank">
-                                الواتس اب
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% for x in videos %}
             <div class="opn-par">
                 <div>
-                    الداعمون
+                    {{ x.0 }}
                 </div>
-                <div class="opn num">
-                    <div>
-                        <div>
-                            <div>
-                                ١
-                            </div>
-                        </div>
-                        <div>
-                            يوسف حسن
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                ٢
-                            </div>
-                        </div>
-                        <div>
-                            أحمد إسماعيل
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="opn-par">
-                <div>
-                    تاريخ التأسيس والهدف
-                </div>
+                {% for y in x.1 %}
                 <div class="opn dat">
                     <div>
                         <div>
                             <div>
-                                ٢٠٢٢/٢/١٩
+                                {{ y.0 }}
                             </div>
                         </div>
                         <div>
-                            يوسف حسن
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                ٢٠٢٢/٢/١٩
-                            </div>
-                        </div>
-                        <div>
-                            أحمد إسماعيل
+                            <form>
+                                {% for z in y.1 %}
+                                <input name="video" id="video" type="submit" value="1" formaction="/episodes"/>
+                                <label for="video" style="background: url({{ z.2 }}); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+                                    <svg x="0px" y="0px" viewBox="0 0 163.861 163.861" style="enable-background:new 0 0 163.861 163.861;" xml:space="preserve">
+                                        <g>
+                                            <path d="M34.857,3.613C20.084-4.861,8.107,2.081,8.107,19.106v125.637c0,17.042,11.977,23.975,26.75,15.509L144.67,97.275 c14.778-8.477,14.778-22.211,0-30.686L34.857,3.613z"/>
+                                        </g>
+                                    </svg>
+                                    <div>
+                                        {{ z.0 }}
+                                    </div>
+                                </label>
+                                {% endfor %}
+                            </form>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
+            {% endfor %}
         </section>
         <section>
             

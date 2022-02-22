@@ -52,6 +52,41 @@
 .opn>div>div:last-child>a:hover {
     text-decoration: underline;
 }
+.opn>div>div:last-child>form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.opn>div>div:last-child>form>input {
+    border: none;
+    padding: 0;
+    width: 0;
+}
+.opn>div>div:last-child>form>label {
+    cursor: pointer;
+    height: 125px;
+    margin: 0 0 20px 20px;
+    width: 250px;
+    border-radius: 15px;
+    flex-wrap: wrap;
+}
+.opn>div>div:last-child>form>label>svg {
+    fill: rgba(104,114,121,1);
+    height: 40px;
+    padding: 42.5px 105px;
+    position: absolute;
+    background-color: rgba(104,114,121,0.4);
+    border-radius: 15px;
+}
+.opn>div>div:last-child>form>label>div {
+    color: rgba(247,181,0,1);
+    padding: 10px;
+    position: absolute;
+    width: 230px;
+}
+.opn>div>div:last-child>form>label>svg:hover {
+    fill: rgba(247,181,0,1);
+}
 .num>div {
     height: 97px;
     overflow: auto;
