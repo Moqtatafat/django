@@ -64,34 +64,36 @@
                 <div>
                     {{ x.0 }}
                 </div>
-                {% for y in x.1 %}
-                <div class="opn dat">
-                    <div>
+                <div>
+                    {% for y in x.1 %}
+                    <div class="opn dat vid">
                         <div>
                             <div>
-                                {{ y.0 }}
+                                <div>
+                                    {{ y.0 }}
+                                </div>
+                            </div>
+                            <div>
+                                {% for z in y.1 %}
+                                <form>
+                                    <input name="video" id="video" type="submit" value="1" formaction="/episodes"/>
+                                    <label for="video" style="background: url({{ z.2 }}); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+                                        <svg x="0px" y="0px" viewBox="0 0 163.861 163.861" style="enable-background:new 0 0 163.861 163.861;" xml:space="preserve">
+                                            <g>
+                                                <path d="M34.857,3.613C20.084-4.861,8.107,2.081,8.107,19.106v125.637c0,17.042,11.977,23.975,26.75,15.509L144.67,97.275 c14.778-8.477,14.778-22.211,0-30.686L34.857,3.613z"/>
+                                            </g>
+                                        </svg>
+                                        <div>
+                                            {{ z.0 }}
+                                        </div>
+                                    </label>
+                                </form>
+                                {% endfor %}
                             </div>
                         </div>
-                        <div>
-                            <form>
-                                {% for z in y.1 %}
-                                <input name="video" id="video" type="submit" value="1" formaction="/episodes"/>
-                                <label for="video" style="background: url({{ z.2 }}); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-                                    <svg x="0px" y="0px" viewBox="0 0 163.861 163.861" style="enable-background:new 0 0 163.861 163.861;" xml:space="preserve">
-                                        <g>
-                                            <path d="M34.857,3.613C20.084-4.861,8.107,2.081,8.107,19.106v125.637c0,17.042,11.977,23.975,26.75,15.509L144.67,97.275 c14.778-8.477,14.778-22.211,0-30.686L34.857,3.613z"/>
-                                        </g>
-                                    </svg>
-                                    <div>
-                                        {{ z.0 }}
-                                    </div>
-                                </label>
-                                {% endfor %}
-                            </form>
-                        </div>
                     </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
             {% endfor %}
         </section>

@@ -52,11 +52,6 @@
 .opn>div>div:last-child>a:hover {
     text-decoration: underline;
 }
-.opn>div>div:last-child>form {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
 .opn>div>div:last-child>form>input {
     border: none;
     padding: 0;
@@ -65,7 +60,7 @@
 .opn>div>div:last-child>form>label {
     cursor: pointer;
     height: 125px;
-    margin: 0 0 20px 20px;
+    position: absolute;
     width: 250px;
     border-radius: 15px;
     flex-wrap: wrap;
@@ -80,7 +75,7 @@
 }
 .opn>div>div:last-child>form>label>div {
     color: rgba(247,181,0,1);
-    padding: 10px;
+    margin: 10px;
     position: absolute;
     width: 230px;
 }
@@ -97,4 +92,13 @@
 }
 .dat>div>div:first-child>div {
     text-align: center;
+}
+.vid>div>div:last-child {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.vid>div>div:last-child>form {
+    height: 145px;
+    width: 270px;
 }
