@@ -25,8 +25,7 @@ SECRET_KEY = "django-insecure-@zg6q=^@os$#4z2#l#v2*8lgk$a!7zg_pi381wnb1d4_8l5i%=
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "dmpoll.herokuapp.com",
-    "127.0.0.1",
+    "*",
 ]
 
 
