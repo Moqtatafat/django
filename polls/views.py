@@ -8,7 +8,7 @@
 from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.template import loader
 
-# from json import dumps
+from json import dumps
 
 from . import models, data, forms
 
@@ -34,12 +34,21 @@ def episodes(request) :
     #     return HttpResponse(request.POST["name"])
     # except :
     #     return HttpResponse("nothing")
-    template = loader.get_template("polls/episodes.html")
-    context = {
-        "videos"        : data.videos,
-        "footer"        : data.footer,
-    }
-    return HttpResponse(template.render(context, request))
+    try :
+        split       = request.GET["video"].split("-")
+        template    = loader.get_template("polls/episode.html")
+        context     = {
+            "video"         : dumps(data.videos[int(split[0])][1][int(split[1])][1][int(split[2])][3]),
+            "footer"        : data.footer,
+        }
+        return HttpResponse(template.render(context, request))
+    except :
+        template = loader.get_template("polls/episodes.html")
+        context = {
+            "videos"        : data.videos,
+            "footer"        : data.footer,
+        }
+        return HttpResponse(template.render(context, request))
 
 def posts(request) :
     template = loader.get_template("polls/about.html")
