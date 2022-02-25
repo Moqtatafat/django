@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "tajawalr";
+    src: url("./Tajawal/Tajawal-Regular.ttf");
+}
+@font-face {
+    font-family: "tajawalm";
+    src: url("./Tajawal/Tajawal-Medium.ttf");
+}
+@font-face {
+    font-family: "tajawalb";
+    src: url("./Tajawal/Tajawal-Bold.ttf");
+}
+@font-face {
+    font-family: "tajawaleb";
+    src: url("./Tajawal/Tajawal-ExtraBold.ttf");
+}
+@font-face {
+    font-family: "tajawalbl";
+    src: url("./Tajawal/Tajawal-Black.ttf");
+}
+@font-face {
+    font-family: "tajawalel";
+    src: url("./Tajawal/Tajawal-ExtraLight.ttf");
+}
+@font-face {
+    font-family: "tajawall";
+    src: url("./Tajawal/Tajawal-Light.ttf");
+}

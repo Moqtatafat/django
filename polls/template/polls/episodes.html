@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ar" dir="rtl">
+    <head>
+<!--    v0.0.1                      -->
+<!--    info                        -->
+        <link href="{% static 'Media/IMG/LOGO.png' %}" rel="icon" type="image/png"/>
+        <title>
+            مقتطفات من الكتاب والسنة
+        </title>
+        <meta name="Moqtatafat" content="مقتطفات من الكتاب والسنة"/>
+        <meta charset="UTF-8"/>
+<!--    CSS                         -->
+        <link rel="stylesheet" type="text/css" href="{% static 'CSS/M.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'CSS/H.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'CSS/S0.css' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'CSS/F.css' %}"/>
+<!--    Fonts                       -->
+        <link rel="stylesheet" type="text/css" href="{% static 'Fonts/Tajawal/font.css' %}"/>
+<!--    Colors                      -->
+<!--
+    rgba(0,0,0,1)
+    rgba(255,255,255,1)
+    rgba(247,181,0,1)   ===> rgba(242,222,187,1)
+    rgba(104,114,121,1) ===> rgba(186,19,28,1)
+    rgba(17,21,24,1)
+-->
+    </head>
+    <body>
+        <header>
+            <div class="pic-hdr" style="background: url({% static '/Media/IMG/istockphoto-1212170511-612x612.jpg' %}); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+                <div>
+                    حلقات المواسم
+                </div>
+            </div>
+            <div class="hdr">
+                <div>
+                    <a class="hdr-lst" href="./episodes">
+                        حلقات المواسم
+                    </a>
+                    <a class="hdr-lst" href="./posts">
+                        المقالات
+                    </a>
+                </div>
+                <a href="./">
+                    <img src="{% static 'Media/IMG/LOGO.png' %}"/>
+                </a>
+                <div>
+                    <a class="hdr-lst" href="./images">
+                        الصور
+                    </a>
+                    <a class="hdr-lst" href="./about">
+                        من نحن
+                    </a>
+                </div>
+            </div>
+            <div class="ctc">
+            
+            </div>
+        </header>
+        <section>
+            {% for x in videos %}
+            <div class="opn-par">
+                <div>
+                    {{ x.0 }}
+                </div>
+                <div>
+                    {% for y in x.1 %}
+                    <div class="opn dat vid">
+                        <div>
+                            <div>
+                                <div>
+                                    {{ y.0 }}
+                                </div>
+                            </div>
+                            <div>
+                                {% for z in y.1 %}
+                                <form method="get" action="/episodes">
+                                    <input name="video" id="video" type="submit"/>
+                                    <label for="video" style="background: url({{ z.2 }}); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+                                        <svg x="0px" y="0px" viewBox="0 0 163.861 163.861" style="enable-background:new 0 0 163.861 163.861;" xml:space="preserve">
+                                            <g>
+                                                <path d="M34.857,3.613C20.084-4.861,8.107,2.081,8.107,19.106v125.637c0,17.042,11.977,23.975,26.75,15.509L144.67,97.275 c14.778-8.477,14.778-22.211,0-30.686L34.857,3.613z"/>
+                                            </g>
+                                        </svg>
+                                        <div>
+                                            {{ z.0 }}
+                                        </div>
+                                    </label>
+                                </form>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+        <section>
+            
+        </section>
+        <footer>
+            <div>
+                <div>
+                    <div>
+                        صفحاتنا
+                    </div>
+                    <div>
+                        {% for i in footer.pages %}
+                        <a href="{{ i.1 }}" target="_blank">
+                            {{ i.0 }}
+                        </a><br/>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        جروبتنا
+                    </div>
+                    <div>
+                        {% for i in footer.groups %}
+                        <a href="{{ i.1 }}" target="_blank">
+                            {{ i.0 }}
+                        </a><br/>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        آخر اﻷخبار
+                    </div>
+                    <div>
+                        {% for i in footer.news %}
+                        <a href="{{ i.1 }}">
+                            {{ i.0 }}
+                        </a><br/>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div>
+                حقوق النشر © لعام {{ footer.year }} محفوظة لموقع
+                <a href="./">مقتطفات من الكتاب والسنة</a><br/>
+                تم إنشاؤه بواسطة
+                <a href="./about#team">فريق مقتطفات من الكتاب والسنة</a><br/>
+            </div>
+        </footer>
+    </body>
+<!--    JS                          -->
+    <script src="{% static 'JS/H.js' %}"></script>
+    <script src="{% static 'JS/S0.js' %}"></script>
+</html>

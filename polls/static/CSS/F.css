@@ -1,0 +1,51 @@
+footer {
+    background-color: rgba(17,21,24,1);
+    padding: 100px 60px 0 60px;
+}
+footer>div:first-child {
+    display: flex;
+    padding: 0 0 100px 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+footer>div:first-child>div {
+    width: 300px;
+}
+footer>div:first-child>div>div {
+    color: rgb(255,255,255,1);
+    margin: 0 0 20px 0;
+    font-family: "tajawalb";
+    font-size: 20px;
+}
+footer>div:first-child>div>div>a {
+    color: rgba(104,114,121,1);
+    margin: 0;
+    font-family: "tajawalr";
+    font-size: 15px;
+}
+footer>div:first-child>div>div>a:hover {
+    color: rgba(247,181,0,1);
+}
+footer>div:last-child::before {
+    content: "";
+    display: block;
+    padding: 0 0 25px 0;
+    border-top: 1px solid rgb(32,40,46,1);
+}
+footer>div:last-child {
+    color: rgba(104,114,121,1);
+    padding: 25px 0;
+    font-family: "tajawalb";
+    font-size: 15px;
+    line-height: 30px;
+}
+footer>div:last-child>a {
+    color: rgba(104,114,121,1);
+    text-decoration: underline;
+}
+footer>div:last-child>br {
+    line-height: 10px;
+}
+footer>div:last-child>a:hover {
+    color: rgba(247,181,0,1);
+}

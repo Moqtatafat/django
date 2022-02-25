@@ -1,0 +1,104 @@
+.opn-par:first-child {
+    margin-top: -100px;
+}
+.opn-par {
+    margin: 40px 40px 40px 40px;
+    padding: 0 0 20px 0;
+    background-color: rgba(255,255,255,1);
+    border-radius: 15px;
+    box-shadow: 0 5px 5px 0 rgba(18,63,82,0.04), 0 0 0 1px rgba(176,181,193,0.2);
+}
+.opn-par>div:first-child {
+    color: rgba(247,181,0,1);
+    padding: 40px 0;
+    font-family: "tajawaleb";
+    font-size: 35px;
+    text-align: center;
+}
+.opn {
+    display: flex;
+    margin: 0 20px;
+    flex-direction: column;
+}
+.opn>div {
+    border: 2.5px rgba(237,239,242,1) solid;
+    display: flex;
+    margin: 0 20px 40px 20px;
+    border-radius: 15px;
+    flex-direction: row;
+}
+.opn>div>div:first-child>img {
+    border: 2.5px rgba(247,181,0,1) solid;
+    margin: 50px;
+    padding: 2.5px;
+    border-radius: 45px;
+}
+.opn>div>div:first-child {
+    color: rgba(247,181,0,1);
+    padding: 25px 50px;
+    font-family: "tajawaleb";
+    font-size: 35px;
+}
+.opn>div>div:last-child {
+    padding: 10px;
+}
+.opn>div>div:last-child>b {
+    font-family: "tajawalb";
+    font-weight: normal;
+}
+.opn>div>div:last-child>a {
+    color: rgba(247,181,0,1);
+}
+.opn>div>div:last-child>a:hover {
+    text-decoration: underline;
+}
+.opn>div>div:last-child>form>input {
+    border: none;
+    padding: 0;
+    width: 0;
+}
+.opn>div>div:last-child>form>label {
+    cursor: pointer;
+    height: 125px;
+    position: absolute;
+    width: 250px;
+    border-radius: 15px;
+    flex-wrap: wrap;
+}
+.opn>div>div:last-child>form>label>svg {
+    fill: rgba(104,114,121,1);
+    height: 40px;
+    padding: 42.5px 105px;
+    position: absolute;
+    background-color: rgba(104,114,121,0.4);
+    border-radius: 15px;
+}
+.opn>div>div:last-child>form>label>div {
+    color: rgba(247,181,0,1);
+    margin: 10px;
+    position: absolute;
+    width: 230px;
+}
+.opn>div>div:last-child>form>label>svg:hover {
+    fill: rgba(247,181,0,1);
+}
+.num>div {
+    height: 97px;
+    overflow: auto;
+}
+.dat>div {
+    display: flex;
+    flex-direction: column;
+}
+.dat>div>div:first-child>div {
+    text-align: center;
+}
+.vid>div>div:last-child {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.vid>div>div:last-child>form {
+    height: 145px;
+    width: 270px;
+}
