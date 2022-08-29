@@ -1,0 +1,196 @@
+{% extends '20220730000000000001_HOME.html' %}
+{% block content %}
+<div class="calc">
+    <div style="background-image: url('https://img.freepik.com/free-vector/realistic-graduate-caps-background_52683-80772.jpg?w=2000');background-postion: center;">
+        
+    </div>
+    {% block calc %}
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div class="optn-gndr-inac">
+                        بنين
+                    </div>
+                    <div class="optn-gndr-inac">
+                        بنين
+                    </div>
+                </div>
+                <div>
+                    <a href="https://tansik.digital.gov.eg/application/" target="_blank">
+                        الاطلاع على صفحة التنسيق
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="optn-lvl-inac">
+                        كتابة المجموع الاعتباري مباشرة
+                    </div>
+                    <div>
+                        <input type="text"/>
+                    </div>
+                </div>
+                <div>
+                    <div class="optn-lvl-inac">
+                        حساب المجموع الاعتباري بالتفصيل
+                    </div>
+                    <div>
+                        <div>
+                            <div>
+                                نظام الثانوية
+                            </div>
+                            <div>
+                                <div class="optn-sys-inac">
+                                    فصلي
+                                </div>
+                                <div class="optn-sys-inac">
+                                    مسار علمي
+                                </div>
+                                <div class="optn-sys-inac">
+                                    مسار أدبي
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="calc-app">
+                                <div>
+                                    <div></div>
+                                    <div>
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>3</div>
+                                        <div>4</div>
+                                        <div>5</div>
+                                        <div>6</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>الرياضيات</div>
+                                    <div>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>الإنجليزي</div>
+                                    <div>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>الأحياء</div>
+                                    <div>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>الكيمياء</div>
+                                    <div>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>الفيزياء</div>
+                                    <div>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>علم البيئة</div>
+                                    <div>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>العربي</div>
+                                    <div>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>الحاسب الآلي</div>
+                                    <div>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>الاجتماعيات</div>
+                                    <div>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                        <input type="text"/>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>القدرات</div>
+                                    <div>
+                                        <input type="text"/>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>المجموع الاعتباري</div>
+                                    <div>
+                                        <input type="text" disabled/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                تعبئة / تفريغ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form formaction="{{ host }}calculator/" formmethod="POST">
+            <button name="dgre" value="GLS" type="submit">
+                الكليات المتاحة من تنسيق 2022
+            </button>
+        </form>
+    </div>
+    {% endblock calc %}
+</div>
+{% endblock content %}

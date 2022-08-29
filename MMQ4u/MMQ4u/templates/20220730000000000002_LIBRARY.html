@@ -1,0 +1,48 @@
+{% extends '20220730000000000001_HOME.html' %}
+{% block content %}
+<div>
+    <div>
+
+    </div>
+    <div class="mnu">
+        <div>
+        
+        </div>
+        <div>
+            <div>
+                <div class="mnu-lst-inac" id="m0">
+                    ورقي
+                </div>
+                <div class="mnu-lst-inac" id="m1">
+                    محوسب
+                </div>
+                <div class="mnu-lst-inac" id="m2">
+                    فترة
+                </div>
+                <div class="mnu-lst-inac" id="m3">
+                    يومي
+                </div>
+                <div class="mnu-lst-inac" id="m4">
+                    كمي
+                </div>
+                <div class="mnu-lst-inac" id="m5">
+                    لفظي
+                </div>
+            </div>
+            <div>
+                {% for member in qdrt %}
+                <a class="lib-lst" id="{{ member.0 }}" href="{{ member.1 }}">
+                    <div>
+                        <img src="{{ member.3 }}"/>
+                    </div>
+                    <div>
+                        {{ member.2 }}
+                    </div>
+                    {% comment %} <div></div> {% endcomment %}
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

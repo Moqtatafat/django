@@ -1,0 +1,50 @@
+footer {
+    width: 100%;
+}
+footer>div:first-child {
+    padding: 50px 50px 0 50px;
+    background-color: var(--n4rd-color);
+}
+footer>div:first-child>div:first-child>div {
+    color: var(--n1st-color);
+    text-align: center;
+}
+footer>div:first-child>div:first-child>div:first-child {
+    padding: 0 0 25px 0;
+    font-size: 40px;
+}
+footer>div:first-child>div:first-child>div:last-child {
+    font-size: 28px;
+}
+footer>div:first-child>div:last-child {
+    padding: 50px 0;
+    margin-right: calc(50% - 295px + 75px);
+}
+footer>div:first-child>div:last-child>a {
+    margin: 0 25px 0 0;
+}
+footer>div:first-child>div:last-child>a>svg {
+    height: 50px;
+}
+footer>div:last-child {
+    display: flex;
+    background-color: var(--n5rd-color);
+    flex-direction: row;
+}
+footer>div:last-child>div:first-child {
+    display: flex;
+    flex-direction: row;
+}
+footer>div:last-child>div:first-child>a {
+    color: var(--n1st-color);
+    display: block;
+    padding: 25px;
+}
+footer>div:last-child>div:first-child>a:hover {
+    background-color: var(--n6rd-color);
+}
+footer>div:last-child>div:last-child {
+    color: var(--n1st-color);
+    padding: 16px 20% 16px 16px;
+    text-align: left;
+}

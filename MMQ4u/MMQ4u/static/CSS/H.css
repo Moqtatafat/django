@@ -1,0 +1,61 @@
+header {
+    display: flex;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: var(--n3rd-color);
+    flex-direction: row;
+}
+header > div > svg {
+    display: none;
+    fill: var(--n1st-color);
+    height: 20px;
+    margin: 25px 25px 0 0;
+}
+header>div:nth-child(2) {
+    padding: 50px 50px 0 50px;
+    width: 250px;
+}
+
+.logo>svg {
+    padding: 0 72.5px;
+    width: 106px;
+}
+.logo>div {
+    color: var(--n1st-color);
+    font-size: 18px;
+    text-align: center;
+}
+.hdr-lst {
+    height: auto;
+    overflow: auto;
+    margin: 50px 0 0 0;
+}
+.hdr-lstc {
+    display: flex;
+    flex-direction: row;
+}
+.hdr-lstc:hover {
+    background-color: var(--n2nd-color);
+    border-radius: 17px;
+}
+.hdr-lstc>div:first-child {
+    height: 28px;
+    padding: 16px;
+    width: 30px;
+}
+.hdr-lstc>div:first-child>svg {
+    height: 27px;
+}
+.hdr-lstc>div:last-child {
+    color: var(--n1st-color);
+    padding: 16px 0;
+    font-family: "alqabas";
+    font-size: 18px;
+}
+
+@media (max-width: 1300px) {
+    header {
+        display: none;
+    }
+}
